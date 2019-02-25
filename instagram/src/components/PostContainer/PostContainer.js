@@ -16,7 +16,7 @@ class PostContainer extends React.Component {
                  <p>{data.timestamp}</p>
                  {data.comments.map(info => (
                      <div>
-                     <p>{info.username}</p>
+                     <p>{info.username}:</p>
                      <p>{info.text}</p>
                      </div>
                  ))}
