@@ -2,10 +2,11 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
-const PostContainer = props => {
+class PostContainer extends React.Component {
+    render() {
     return (
         <div className="postContainer">
-            {props.dummyData.map(data => {
+            {this.props.dummyData.map(data => {
                 return (
                 <div className="dummyData" key={data.timestamp}>
 
@@ -13,16 +14,26 @@ const PostContainer = props => {
                  <img src={data.imageUrl} alt={data.imageUrl} />
                  <p>{data.likes} likes</p>
                  <p>{data.timestamp}</p>
-                 {/* <p>{data.comments}</p> */}
+                 {data.comments.map(info => (
+                     <div>
+                     <p>{info.username}</p>
+                     <p>{info.text}</p>
+                     </div>
+                 ))}
                  <CommentSection 
                     key={data.timestamp}
+                    dummyData={this.props.dummyData}
                  />
                  </div>
                 )
-                })}
+                })};
         </div>
     );
 }
+
+}
+
+// PropTypes
 
 PostContainer.propTypes = {
     dummyData: PropTypes.arrayOf(
