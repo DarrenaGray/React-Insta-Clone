@@ -2,35 +2,26 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
-class PostContainer extends React.Component {
-    render() {
+const PostContainer = props => {
     return (
-        <div className="postContainer">
-            {this.props.dummyData.map(data => {
+        <div className="post-container">
+            {props.dummyData.map(data => {
                 return (
-                <div className="dummyData" key={data.timestamp}>
-
-                 <img src={data.thumbnailUrl} alt={data.username}/>
-                 <img src={data.imageUrl} alt={data.imageUrl} />
-                 <p>{data.likes} likes</p>
-                 <p>{data.timestamp}</p>
-                 {data.comments.map(info => (
-                     <div>
-                     <p>{info.username}:</p>
-                     <p>{info.text}</p>
-                     </div>
-                 ))}
-                 <CommentSection 
-                    key={data.timestamp}
-                    dummyData={this.props.dummyData}
-                 />
-                 </div>
+                    <div className="post-header" key={data.timestamp}>
+                        <img src={data.thumbnailUrl} alt={data.username}/>
+                        <p>{data.username}</p>
+                        <img src={data.imageUrl} alt={data.imageUrl} />
+                        <p>{data.likes} likes</p>
+                        <p>{data.timestamp}</p>
+                        <CommentSection 
+                            key={data.timestamp}
+                            data={data}
+                        />
+                    </div>
                 )
                 })};
         </div>
     );
-}
-
 }
 
 // PropTypes
@@ -38,16 +29,16 @@ class PostContainer extends React.Component {
 PostContainer.propTypes = {
     dummyData: PropTypes.arrayOf(
         PropTypes.shape({
-            username: PropTypes.string.isRequired,
+            username: PropTypes.string,
             thumbnailUrl: PropTypes.string.isRequired,
             imageUrl: PropTypes.string.isRequired,
             likes: PropTypes.number.isRequired,
-            comments: PropTypes.arrayOf(
-                PropTypes.shape({
-                    username: PropTypes.string,
-                    text: PropTypes.string
-                })
-            )
+            // comments: PropTypes.arrayOf(
+            //     PropTypes.shape({
+            //         username: PropTypes.string,
+            //         text: PropTypes.string
+            //     })
+            // )
         })
     )
 };
