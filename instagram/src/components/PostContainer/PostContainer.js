@@ -1,13 +1,14 @@
 import React from 'react';
 import Post from '../PostContainer/Post';
 import PropTypes from 'prop-types';
+import './PostContainer.css'
 
 const PostContainer = props => {
     return (
-        <div className="post-container">
-            {props.dummyData.map(data => {
+        <div>
+            {props.dummyData.map((data, i) => {
                 return (
-                    <div className="post-header" key={data.timestamp}>
+                    <div className="post-container" key={i}>
                         <Post data={data}/>
                         {/* Passed data below as props to Post component: */}
                         {/* <img src={data.thumbnailUrl} alt={data.username}/>

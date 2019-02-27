@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-// import * as Icon from 'react-feather';
+import * as Icon from 'react-feather';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -15,7 +15,8 @@ class CommentSection extends React.Component {
         return (
         <div className="comment-section">
             <div className="commentsAndLikes">
-            {/* <Icon.Heart className='icons' /> */}
+            <Icon.Heart className='icons' />
+            <Icon.MessageCircle className='icons' />
             </div>
              <p>{this.state.likes} likes</p>
             {this.state.comments.map((comment, i) => {
