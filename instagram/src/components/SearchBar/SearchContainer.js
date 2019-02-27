@@ -5,11 +5,12 @@ import IGlogo from '../../assets/ig_logo.png';
 
 // import * as Icon from 'react-feather';
 
-const SearchBar = () => {
+const SearchBar = props => {
     return (
         <div className="ig-imgs">
           <div>
-            <img className="ig-camera" src="" alt="" />
+            {/* <Icon.Heart className="icon" /> */}
+            {/* <img className="ig-camera" src="" alt="" /> */}
             <img className="ig-logo"src={IGlogo} alt={IGlogo}/>
             </div>
             <div>

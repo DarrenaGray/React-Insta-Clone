@@ -9,9 +9,29 @@ class App extends React.Component {
   constructor () {
     super ();
     this.state = {
-      dummyData: dummyData
+      dummyData: [],
+      searchData: []
     };
   }
+
+  componentDidMount() {
+    console.log('CMD');
+    this.setState({
+      dummyData: dummyData
+    })
+  }
+
+  // searchBarHandler = e => {
+  //   const posts = this.state.dummyData.filter( post => {
+  //     if(post.username.includes(event.target.value)) {
+  //       return post
+  //     }
+  //   });
+  //   this.setState({
+  //     searchData: posts
+  //   })
+  // }
+
   render() {
     return (
       <div className="App">

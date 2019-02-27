@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from '../PostContainer/Post';
-import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
@@ -10,18 +9,19 @@ const PostContainer = props => {
                 return (
                     <div className="post-header" key={data.timestamp}>
                         <Post data={data}/>
+                        {/* Passed data below as props to Post component: */}
                         {/* <img src={data.thumbnailUrl} alt={data.username}/>
-                        <p>{data.username}</p> */}
+                        <p>{data.username}</p>
                         <img src={data.imageUrl} alt={data.imageUrl} />
                         <p>{data.likes} likes</p>
-                        <p>{data.timestamp}</p>
-                        <CommentSection 
-                            key={data.timestamp}
-                            data={data}
-                        />
+                        <p>{data.timestamp}</p> */}
+                        {/* <CommentSection 
+                            comments={data.comments}
+                            likes={data.likes}
+                        /> */}
                     </div>
                 )
-                })};
+                })}
         </div>
     );
 }
