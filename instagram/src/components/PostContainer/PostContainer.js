@@ -1,4 +1,5 @@
 import React from 'react';
+import Post from '../PostContainer/Post';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
@@ -8,8 +9,9 @@ const PostContainer = props => {
             {props.dummyData.map(data => {
                 return (
                     <div className="post-header" key={data.timestamp}>
-                        <img src={data.thumbnailUrl} alt={data.username}/>
-                        <p>{data.username}</p>
+                        <Post data={data}/>
+                        {/* <img src={data.thumbnailUrl} alt={data.username}/>
+                        <p>{data.username}</p> */}
                         <img src={data.imageUrl} alt={data.imageUrl} />
                         <p>{data.likes} likes</p>
                         <p>{data.timestamp}</p>
