@@ -21,22 +21,28 @@ class App extends React.Component {
     })
   }
 
-  // searchBarHandler = e => {
-  //   const posts = this.state.dummyData.filter( post => {
-  //     if(post.username.includes(event.target.value)) {
-  //       return post
-  //     }
-  //   });
-  //   this.setState({
-  //     searchData: posts
-  //   })
-  // }
+  searchBarHandler = e => {
+    const posts = this.state.dummyData.filter( post => {
+      if(post.username.includes(e.target.value)) {
+        return post
+      }
+    });
+    this.setState({
+      searchData: posts
+    })
+  }
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer dummyData={this.state.dummyData}/>
+        <SearchBar searchPosts={this.searchBarHandler}/>
+        <PostContainer 
+            postData={
+              this.state.searchData.length > 0 ?
+              this.state.searchData :
+              this.state.dummyData
+            }
+        />
       </div>
     );
   }

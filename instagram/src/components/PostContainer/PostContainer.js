@@ -6,7 +6,7 @@ import './PostContainer.css'
 const PostContainer = props => {
     return (
         <div>
-            {props.dummyData.map((data, i) => {
+            {props.postData.map((data, i) => {
                 return (
                     <div className="post-container" key={i}>
                         <Post data={data}/>
