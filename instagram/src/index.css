@@ -54,7 +54,7 @@ body {
 }
 
 ::placeholder {  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(189, 189, 189);
+  color: #999;
   opacity: 1; /* Firefox */
 }
 
