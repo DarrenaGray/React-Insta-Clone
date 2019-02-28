@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
 import {Form, Input} from 'reactstrap';
+import './CommentSection.css';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -35,15 +36,15 @@ class CommentSection extends React.Component {
 
     render(){
         return (
-        <div className="comment-section">
+        <div className="commentSection">
             <div className="commentsAndLikes">
-            <Icon.Heart className='icons' />
-            <Icon.MessageCircle className='icons' />
-            </div>
-             <p>{this.state.likes} likes</p>
+                <Icon.Heart className='icons' />
+                <Icon.MessageCircle className='icons' />
+                <p>{this.state.likes} likes</p>
+             </div>
             {this.state.comments.map((comment, i) => {
                 return (
-                    <div className="comment-content" key={i}>
+                    <div className="commentContent" key={i}>
                         <p className="userName">{comment.username}</p>
                         <p>{comment.text}</p>
                     </div>

@@ -8,7 +8,7 @@ const PostContainer = props => {
         <div>
             {props.postData.map((data, i) => {
                 return (
-                    <div className="post-container" key={i}>
+                    <div className="postContainer" key={i}>
                         <Post data={data}/>
                         {/* Passed data below as props to Post component: */}
                         {/* <img src={data.thumbnailUrl} alt={data.username}/>
