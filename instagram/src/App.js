@@ -4,7 +4,8 @@ import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import PostPage from './components/PostContainer/PostPage';
+// import PostPage from './components/PostContainer/PostPage';
+import Login from './components/Login/Login';
 
 class App extends React.Component {
   constructor () {
@@ -23,14 +24,11 @@ class App extends React.Component {
   }
 
   searchBarHandler = e => {
-    // Figure out how to fix the warning below:
-    // './src/App.js
-    // Line 31:  Expected to return a value at the end of arrow function  array-callback-return'
-    
-    // eslint-disable-next-line 
     const posts = this.state.dummyData.filter( post => {
       if(post.username.includes(e.target.value)) {
         return post
+      } else {
+        return null
       }
     });
     this.setState({
@@ -49,7 +47,8 @@ class App extends React.Component {
               this.state.dummyData
             }
         />
-        <PostPage />
+        {/* <PostPage /> */}
+        <Login />
       </div>
     );
   }
