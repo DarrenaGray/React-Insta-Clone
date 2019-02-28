@@ -14,6 +14,7 @@ class CommentSection extends React.Component {
            }
         }
     
+        
     addNewComment = e => {
         e.preventDefault();
         this.setState({
@@ -34,11 +35,20 @@ class CommentSection extends React.Component {
         })
     }
 
+    increasLikes = () => {
+        this.setState ({
+            likes: this.state.likes +1
+        })
+    }
+
     render(){
         return (
         <div className="commentSection">
             <div className="commentsAndLikes">
-                <Icon.Heart className='icons' />
+                <Icon.Heart 
+                    className='icons'
+                    onClick={this.increasLikes}
+                    />
                 <Icon.MessageCircle className='icons' />
                 <p>{this.state.likes} likes</p>
              </div>
