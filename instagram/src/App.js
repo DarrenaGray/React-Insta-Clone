@@ -1,9 +1,10 @@
 import React from 'react';
 
+import './App.css';
 import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
-import './App.css';
 import PostContainer from './components/PostContainer/PostContainer';
+import PostPage from './components/PostContainer/PostPage';
 
 class App extends React.Component {
   constructor () {
@@ -48,6 +49,7 @@ class App extends React.Component {
               this.state.dummyData
             }
         />
+        <PostPage />
       </div>
     );
   }

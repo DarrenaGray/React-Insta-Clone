@@ -17,7 +17,10 @@ const SearchBar = props => {
                     <Input
                       type="search"
                       name="search"
-                      placeholder="🔍 Search " />
+                      placeholder="🔍 Search " 
+                      onChange={props.searchPosts}
+                      value={props.value}
+                    />
                 </FormGroup>
             </Form>
             <div className="igUserIcons">

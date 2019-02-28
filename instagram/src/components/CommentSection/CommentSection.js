@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+
 import * as Icon from 'react-feather';
 import {Form, Input} from 'reactstrap';
 import './CommentSection.css';
@@ -72,13 +72,6 @@ class CommentSection extends React.Component {
     )
     }
 }
-// PropTypes
 
-CommentSection.propTypes = {
-    comments: PropTypes.shape({
-        username: PropTypes.string,
-        text: PropTypes.string
-    })
-}
 
 export default CommentSection;
