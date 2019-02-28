@@ -17,7 +17,7 @@ const SearchBar = props => {
                     <Input
                       type="search"
                       name="search"
-                      placeholder="🔍 Search" />
+                      placeholder="🔍 Search " />
                 </FormGroup>
             </Form>
             <div className="igUserIcons">
