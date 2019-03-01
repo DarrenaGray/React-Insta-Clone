@@ -1,6 +1,6 @@
 .postContainer {
     max-width: 600px;
-    margin: 15px 158px 15px 0 ;
+    margin: 60px 158px 15px 0 ;
     border: 1px solid lightgray;
 }
 
@@ -12,6 +12,10 @@
     display: flex;
     align-items: center;
     margin: 10px 15px;
+}
+
+.postInfo p {
+    font-weight: 700;
 }
 
 .userThumbnail {

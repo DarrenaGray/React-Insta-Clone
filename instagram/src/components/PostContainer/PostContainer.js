@@ -10,16 +10,6 @@ const PostContainer = props => {
                 return (
                     <div className="postContainer" key={i}>
                         <Post data={data}/>
-                        {/* Passed data below as props to Post component: */}
-                        {/* <img src={data.thumbnailUrl} alt={data.username}/>
-                        <p>{data.username}</p>
-                        <img src={data.imageUrl} alt={data.imageUrl} />
-                        <p>{data.likes} likes</p>
-                        <p>{data.timestamp}</p> */}
-                        {/* <CommentSection 
-                            comments={data.comments}
-                            likes={data.likes}
-                        /> */}
                     </div>
                 )
                 })}
@@ -36,12 +26,6 @@ PostContainer.propTypes = {
             thumbnailUrl: PropTypes.string.isRequired,
             imageUrl: PropTypes.string.isRequired,
             likes: PropTypes.number.isRequired,
-            // comments: PropTypes.arrayOf(
-            //     PropTypes.shape({
-            //         username: PropTypes.string,
-            //         text: PropTypes.string
-            //     })
-            // )
         })
     )
 };

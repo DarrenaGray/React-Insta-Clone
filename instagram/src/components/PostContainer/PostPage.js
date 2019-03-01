@@ -3,25 +3,24 @@ import React from 'react';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
-import Login from '../Login/Login';
 
 class PostPage extends React.Component {
     constructor (props) {
         super (props);
         this.state = {
-          // showFirst: true,
           dummyData: [],
           searchData: []
         };
       }
     
       componentDidMount() {
-        console.log('CMD');
+        console.log('Mounted');
         this.setState({
           dummyData: dummyData
         })
       }
     
+      // Filters the search to return values entered into the searchbar
       searchBarHandler = e => {
         const posts = this.state.dummyData.filter( post => {
           if(post.username.includes(e.target.value)) {
@@ -38,7 +37,6 @@ class PostPage extends React.Component {
       render() {
         return (
           <div className="App">
-            <Login />
             <SearchBar searchPosts={this.searchBarHandler}/>
             <PostContainer 
                 postData={
