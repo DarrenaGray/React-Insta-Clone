@@ -17,7 +17,7 @@ class PostPage extends React.Component {
         console.log('Mounted');
         this.setState({
           dummyData: dummyData
-        })
+        });
       }
     
       // Filters the search to return values entered into the searchbar
@@ -33,6 +33,12 @@ class PostPage extends React.Component {
           searchData: posts
         })
       }
+
+      logOut = e => {
+        e.preventDefault();
+        localStorage.removeItem('user');
+        window.location.reload();
+    }
     
       render() {
         return (
@@ -45,6 +51,7 @@ class PostPage extends React.Component {
                   this.state.dummyData
                 }
             />
+            <button type="submit" onClick={this.logOut}>Logout</button>
           </div>
         );
       }

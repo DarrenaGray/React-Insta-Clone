@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
                comments: props.comments,
                likes: props.likes,
                comment: ''
-           }
+           };
         }
     
         
@@ -26,7 +26,7 @@ class CommentSection extends React.Component {
                 }
             ],
             comment: ''
-        })
+        });
     }
 
     handleChanges = e => {
@@ -38,7 +38,7 @@ class CommentSection extends React.Component {
     increasLikes = () => {
         this.setState ({
             likes: this.state.likes +1
-        })
+        });
     }
 
     render(){
