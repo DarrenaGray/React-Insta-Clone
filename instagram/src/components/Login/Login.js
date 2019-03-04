@@ -53,7 +53,11 @@ class Login extends React.Component {
                             required
                         />
                     </FormGroup>
-                    <Button className="loginBtn" onClick={this.logIn}type="submit">Login</Button>
+                    <Button 
+                        color="primary"
+                        className="loginBtn" 
+                        onClick={this.logIn}
+                        type="submit">Login</Button>
                 </Form>
             </div>
         )
