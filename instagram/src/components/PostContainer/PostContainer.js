@@ -1,15 +1,17 @@
 import React from 'react';
 import Post from '../PostContainer/Post';
 import PropTypes from 'prop-types';
-import './PostContainer.css'
+// import './PostContainer.css';
+
+
 
 const PostContainer = props => {
     return (
         <div>
             {props.postData.map((data, i) => {
                 return (
-                    <div className="postContainer" key={i}>
-                        <Post data={data}/>
+                    <div key={i}>
+                        <Post data={data} key={i}/>
                     </div>
                 )
                 })}
@@ -33,5 +35,7 @@ PostContainer.propTypes = {
 PostContainer.defaultProps ={
     dummydata: []
 };
+
+
 
 export default PostContainer;

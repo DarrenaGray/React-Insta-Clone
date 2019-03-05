@@ -1,9 +1,12 @@
 import React from 'react';
 // import './SearchBar.css';
-import {Form, FormGroup, InputGroup} from 'reactstrap';
+import {Form, FormGroup, InputGroup} from 'reactstrap'; // use {Form, FromGroup, Input} for styling with CSS
 import styled from 'styled-components';
 
 import * as Icon from 'react-feather';
+
+
+// Syntax for components styled with styled-components
 
 const SearchBar = props => {
     return (
@@ -40,6 +43,8 @@ const SearchBar = props => {
     );
 }
 
+// Syntax for CSS styled elements
+
 // const SearchBar = props => {
 //     return (
 //         <div className="searchBar">
@@ -67,6 +72,8 @@ const SearchBar = props => {
 //         </div>
 //     );
 // }
+
+// Styled Components
 
 const Header = styled.div`
     display: flex;
