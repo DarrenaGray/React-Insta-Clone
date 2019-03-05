@@ -1,5 +1,5 @@
 import React from 'react';
-import './SearchBar.css';
+// import './SearchBar.css';
 import {Form, FormGroup, InputGroup} from 'reactstrap';
 import styled from 'styled-components';
 
@@ -29,15 +29,44 @@ const SearchBar = props => {
                     </InputGroup>
                 </FormGroup>
             </Form>
-            <div className="igUserIcons">
-            
+            <Icons>
+            {/* <div className="igUserIcons"> */}
                 <Icon.Compass className="igIcons" />
                 <Icon.Heart className="igIcons" />
                 <Icon.User className="igIcons" />
-            </div>
+            {/* </div> */}
+            </Icons>
         </Header>
     );
 }
+
+// const SearchBar = props => {
+//     return (
+//         <div className="searchBar">
+//           <div className="igLogos">
+//                 <Icon.Instagram size={25} />
+//                 <p></p>
+//                 <img className="igTextLogo"src="https://fontmeme.com/images/instagram-new-logo.png" alt="Instagram"/>
+//             </div>
+//             <Form>
+//                 <FormGroup>
+//                     <Input
+//                       type="search"
+//                       name="search"
+//                       placeholder="🔍 Search " 
+//                       onChange={props.searchPosts}
+//                       value={props.value}
+//                     />
+//                 </FormGroup>
+//             </Form>
+//             <div className="igUserIcons">
+//                 <Icon.Compass className="igIcons" />
+//                 <Icon.Heart className="igIcons" />
+//                 <Icon.User className="igIcons" />
+//             </div>
+//         </div>
+//     );
+// }
 
 const Header = styled.div`
     display: flex;
@@ -75,6 +104,10 @@ const Input = styled.input`
     border: 1px solid lightgray;
     outline: none;
     padding: 5px;
+`
+
+const Icons = styled.div`
+    margin: 8px 15px;
 `
 
 export default SearchBar;
