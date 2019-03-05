@@ -15,7 +15,7 @@ const SearchBar = props => {
             <Icon.Instagram size={25} />
             <LogoHeaderP></LogoHeaderP>
                 <LogoImage 
-                    src="https://fontmeme.com/images/instagram-new-logo.png" 
+                    src={`https://fontmeme.com/images/instagram-new-logo.png`}
                     alt="Instagram"
                 />
             </LogoHeader>
@@ -92,7 +92,7 @@ const LogoHeader = styled.div`
 
 `
 
-const LogoImage = styled.div`
+const LogoImage = styled.img`
     width: 100px;
     height: 40px;
 
