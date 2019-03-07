@@ -9,6 +9,7 @@ const PostContainer = props => {
     return (
         <div>
             {props.postData.map((data, i) => {
+                console.log(data)
                 return (
                     <div key={i}>
                         <Post data={data} key={i}/>
@@ -22,14 +23,7 @@ const PostContainer = props => {
 // PropTypes
 
 PostContainer.propTypes = {
-    dummyData: PropTypes.arrayOf(
-        PropTypes.shape({
-            username: PropTypes.string,
-            thumbnailUrl: PropTypes.string.isRequired,
-            imageUrl: PropTypes.string.isRequired,
-            likes: PropTypes.number.isRequired,
-        })
-    )
+    postData: PropTypes.array.isRequired
 };
 
 PostContainer.defaultProps ={

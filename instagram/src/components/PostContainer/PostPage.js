@@ -16,7 +16,7 @@ class PostPage extends React.Component {
       }
     
       componentDidMount() {
-        console.log('Mounted');
+        console.log('CDM');
         this.setState({
           dummyData: dummyData
         });
@@ -45,13 +45,14 @@ class PostPage extends React.Component {
       render() {
         return (
           <div className="App">
-            <SearchBar searchPosts={this.searchBarHandler}/>
+            <SearchBar 
+              searchPosts={this.searchBarHandler}/>
             <PostContainer 
-                postData={
-                  this.state.searchData.length > 0 ?
-                  this.state.searchData :
-                  this.state.dummyData
-                }
+              postData={
+                this.state.searchData.length > 0 ?
+                this.state.searchData :
+                this.state.dummyData
+              }
             />
             <Button type="submit" onClick={this.logOut}>Logout</Button>
           </div>

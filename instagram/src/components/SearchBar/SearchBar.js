@@ -1,5 +1,6 @@
 import React from 'react';
-// import './SearchBar.css';
+import PropTypes from 'prop-types'
+import './SearchBar.css';
 import {Form, FormGroup, InputGroup} from 'reactstrap'; // use {Form, FromGroup, Input} for styling with CSS
 import styled from 'styled-components';
 
@@ -33,15 +34,21 @@ const SearchBar = props => {
                 </FormGroup>
             </Form>
             <Icons>
-            {/* <div className="igUserIcons"> */}
+            <div className="igUserIcons">
                 <Icon.Compass className="igIcons" />
                 <Icon.Heart className="igIcons" />
                 <Icon.User className="igIcons" />
-            {/* </div> */}
+            </div>
             </Icons>
         </Header>
     );
 }
+
+// PropTypes 
+
+SearchBar.propTypes = {
+    searchPosts: PropTypes.func.isRequired
+    }
 
 // Syntax for CSS styled elements
 
@@ -110,7 +117,8 @@ const Input = styled.input`
     background-color: rgb(248, 247, 247);
     border: 1px solid lightgray;
     outline: none;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 5px;
 `
 
 const Icons = styled.div`

@@ -9,8 +9,8 @@ import styled from 'styled-components';
 // Syntax styled using styled components
 
 class Login extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
             this.state ={
                 username: '',
                 password: ''

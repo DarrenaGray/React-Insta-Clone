@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 // import './PostContainer.css';
 
@@ -39,6 +40,20 @@ const Post = props => {
 //         </div>
 //     )
 // }
+
+// PropTypes 
+
+Post.propTypes = {
+    data: PropTypes.shape({
+            username: PropTypes.string.isRequired,
+            thumbnailUrl: PropTypes.string.isRequired,
+            imageUrl: PropTypes.string.isRequired,
+            likes: PropTypes.number.isRequired,
+        })
+        
+}
+
+
 
 // Styled Components
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const withAuthenticate = App => Login =>
   class extends React.Component {
       constructor(props) {
@@ -29,5 +30,6 @@ const withAuthenticate = App => Login =>
       return <Login />;
     }
   };
+
 
 export default withAuthenticate;
