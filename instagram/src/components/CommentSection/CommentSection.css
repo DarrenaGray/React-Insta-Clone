@@ -1,0 +1,39 @@
+.commentSection {
+    /* border: 1px solid lightgray; */
+    border-top: none;
+    margin: 10px 15px 0 15px;
+    font-size: 15px;
+    
+}
+
+.commentsAndLikes {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.commentContent {
+    display: flex;
+    /* border: 1px solid red; */
+    margin: 15px 0;
+}
+
+.commentsAndLikes p {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.userName {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.commentSection Input {
+    border: 1px solid lightgray;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    margin: 10px auto 0 auto;
+    outline: none;
+    line-height: 50px
+}

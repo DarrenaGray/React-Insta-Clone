@@ -1,0 +1,39 @@
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.igLogos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.igLogos p {
+    border-left: 1px solid lightgray;
+    height: 25px;
+    margin: 0px 15px 0 20px;
+}
+
+.igTextLogo {
+    width: 100px;
+    height: 40px;
+    /* border-left: 1px solid black; */
+}
+
+.searchBar Input {
+    margin: 8px auto;
+    text-align: center;
+    background-color: rgb(248, 247, 247);
+    border: 1px solid lightgray;
+    outline: none;
+    padding: 5px;
+}
+
+.igIcons {
+    margin: 8px 15px;
+}
